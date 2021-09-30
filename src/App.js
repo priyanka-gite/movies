@@ -10,12 +10,18 @@ import Aboutus from "./pages/Aboutus";
 function App() {
   return (
     <div className="App">
+      <h1>Movie App</h1>
+
       <NavBar />
+
+      {/* Everything that we put outside switch shows up in every page thats why we put navbar out */}
+
       <Switch>
         <Route path="/aboutus" component={Aboutus} />
         <Route path="/discovermoviespage" component={Discovermoviespage} />
         <Route path="/" component={Homepage} />
       </Switch>
+      {/* <h3>Footer</h3> */}
     </div>
   );
 }
