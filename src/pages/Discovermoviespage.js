@@ -25,6 +25,10 @@ export default function Discovermoviespage() {
     <div>
       <h2>Discover some movies!</h2>
       {/* input can take properties like value, onchange, placeholder*/}
+      {/* <Link to="/">
+        <button> Homepage</button>
+      </Link>
+      <br></br> */}
       <input value={searchText} onChange={(event) => set_searchText(event.target.value)} />
       <button onClick={fetchData}> Search </button>
       {!movies
@@ -32,9 +36,9 @@ export default function Discovermoviespage() {
         : movies.map((movie) => {
             return (
               <div key={movie.imdbID}>
-                <link to="/">
+                <Link to={"/movie/${movie.imdbID"}>
                   <h3>{movie.Title}</h3>
-                </link>
+                </Link>
                 <img src={movie.Poster} alt={movie.Title} />
               </div>
             );
